@@ -24,10 +24,9 @@ const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 const app = express();
 const port = 5000;
 
-// PostgreSQL Pool Configuration using environment variables
 const pool = new Pool({
   user: process.env.DB_USER,
-  host: process.env.DB_HOST,
+  host: process.env.DB_HOST,       // Ab yeh "fcchome-backend.onrender.com" ho jayega
   database: process.env.DB_NAME,
   password: process.env.DB_PASSWORD,
   port: process.env.DB_PORT,
